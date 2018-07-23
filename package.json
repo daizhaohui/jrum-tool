@@ -1,0 +1,91 @@
+{
+  "name": "jruitool",
+  "version": "1.0.0",
+  "description": "JRUITool",
+  "productName": "JRUITool",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "dist:mac": "build -m --x64",
+    "dist:win": "build -w --ia32",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.ffan.biz:8022/daizhaohui/JRUITool.git"
+  },
+  "author": "daizhaohui",
+  "license": "ISC",
+  "dependencies": {
+    "ajv-keywords": "^3.2.0",
+    "antd": "^3.6.2",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.10",
+    "node-pty": "^0.7.6",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router": "^4.3.1",
+    "xterm": "^3.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "electron": "^2.0.3",
+    "electron-rebuild": "^1.8.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-merge": "^4.1.2"
+  },
+  "build": {
+    "appId": "jrui.dailinxi.cn",
+    "electronVersion": "2.0.4",
+    "copyright": "Copyright © year ${author}",
+    "directories": {
+      "output": "dist",
+      "app": "app"
+    },
+    "dmg": {
+      "icon": "app/assets/images/app128.icns",
+      "iconSize": "128",
+      "title": "${productName} ${version}",
+      "format": "UDZO",
+      "window": {
+        "x": "200",
+        "y": "200",
+        "width": "800",
+        "height": "600"
+      }
+    },
+    "asar": "false",
+    "forceCodeSigning": "false",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  }
+}

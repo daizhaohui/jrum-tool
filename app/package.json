@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "jrtool",
+  "main": "main.js",
+  "scripts": {
+    "pack": ""
+  },
+  "author": "daizhaohui",
+  "license": "ISC",
+  "dependencies": {
+    "node-pty": "^0.7.6"
+  }
+}
